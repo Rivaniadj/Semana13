@@ -5,11 +5,11 @@ const controller = require("../controllers/tarefasController")
 
 
 
-router.get("/", controller.getAll);
-router.post("/cadastro", controller.criarTarefa);
-router.put("/editar/:id", controller.atualizarTarefa);
-router.patch("/naoconcluidas/:id", controller.concluirTarefa);
-router.delete("/:id", controller.deletarTarefa);
-
+router.get("/", controller.getAllTarefas);
+router.post("/create/:id", controller.createTarefa);
+router.put("/editar/:id", controller. updateTarefas);
+router.patch("/:id", controller.updateAnything)
+router.delete("/tarefas/:id", controller.deleteTarefa);
+router.get("/:id", controller.getTarefasById)
 
 module.exports = router;
